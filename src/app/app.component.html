@@ -1,5 +1,17 @@
 <div>
 
-  <p>asdf</p>
+  <p>dec</p> <input [(ngModel)]="cislo" (change)="eventCislo()">
+
+  <br>
+
+  <p>bin</p>
+  <input type="checkbox" [checked]="cislo7" (change)="eventCisloBin7()">
+  <input type="checkbox" [checked]="cislo6" (change)="eventCisloBin6()">
+  <input type="checkbox" [checked]="cislo5" (change)="eventCisloBin5()">
+  <input type="checkbox" [checked]="cislo4" (change)="eventCisloBin4()">
+  <input type="checkbox" [checked]="cislo3" (change)="eventCisloBin3()">
+  <input type="checkbox" [checked]="cislo2" (change)="eventCisloBin2()">
+  <input type="checkbox" [checked]="cislo1" (change)="eventCisloBin1()">
+  <input type="checkbox" [checked]="cislo0" (change)="eventCisloBin0()">
 
 </div>
