@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-enum MENU {OSOBY}
+enum MENU {OSOBY, KNIHY}
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,6 @@ export class AppComponent {
 
   menu = MENU;
   aktualne: MENU = MENU.OSOBY;
-  //MENU menu = new MENU();
 
   zobrazOsoby = false;
 
@@ -22,8 +21,15 @@ export class AppComponent {
   osoby:any = [];
   osoba = {id: "id", meno:"meno", kontakt:"kontakt"};
 
+  knihy:any = [];
+  kniha = {id: " ", meno:" ", autor:" ", dostupnost:" "};
+
   public pridajOsobu(): void{
     this.osoby.push({id: this.osoba.id, meno: this.osoba.meno, kontakt: this.osoba.kontakt});
+  }
+
+  public pridajKnihu(): void{
+    this.knihy.push({id: this.kniha.id, meno: this.kniha.meno, autor: this.kniha.autor, dostupnost:this.kniha.dostupnost});
   }
 
 }
