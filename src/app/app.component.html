@@ -1,17 +1,19 @@
 <div>
 
-  <p>dec</p> <input [(ngModel)]="cislo" (change)="eventCislo()">
-
+<div *ngIf="aktualne == menu.OSOBY">
+  <h1>Osoby</h1>
+  id:
+  <input [(ngModel)]="osoba.id"><br>
+  meno:
+  <input [(ngModel)]="osoba.meno"><br>
+  kontakt:
+  <input [(ngModel)]="osoba.kontakt"><br>
   <br>
-
-  <p>bin</p>
-  <input type="checkbox" [checked]="cislo7" (change)="eventCisloBin7()">
-  <input type="checkbox" [checked]="cislo6" (change)="eventCisloBin6()">
-  <input type="checkbox" [checked]="cislo5" (change)="eventCisloBin5()">
-  <input type="checkbox" [checked]="cislo4" (change)="eventCisloBin4()">
-  <input type="checkbox" [checked]="cislo3" (change)="eventCisloBin3()">
-  <input type="checkbox" [checked]="cislo2" (change)="eventCisloBin2()">
-  <input type="checkbox" [checked]="cislo1" (change)="eventCisloBin1()">
-  <input type="checkbox" [checked]="cislo0" (change)="eventCisloBin0()">
+  <button (click)="pridajOsobu()">Pridaj</button><br><br>
+  Zoznam:<br>
+  <div *ngFor="let o of osoby">
+    {{o.id}} {{o.meno}} {{o.kontakt}}
+  </div>
+</div>
 
 </div>
