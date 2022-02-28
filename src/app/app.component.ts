@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-enum MENU {OSOBY, KNIHY}
+enum MENU {OSOBY, KNIHY,VYPOZICKY}
 
 @Component({
   selector: 'app-root',
@@ -12,8 +12,6 @@ export class AppComponent {
   menu = MENU;
   aktualne: MENU = MENU.OSOBY;
 
-  zobrazOsoby = false;
-
   otvorMenu(m: MENU){
     this.aktualne = m;
   }
@@ -24,7 +22,10 @@ export class AppComponent {
   knihy:any = [];
   kniha = {id: " ", meno:" ", autor:" ", dostupnost:" "};
 
-  public pridajOsobu(): void{
+  vypozicky:any = [];
+  vypozicka = {id:" ", kniha:" ", osoba:" "};
+
+    public pridajOsobu(): void{
     this.osoby.push({id: this.osoba.id, meno: this.osoba.meno, kontakt: this.osoba.kontakt});
   }
 
@@ -32,4 +33,7 @@ export class AppComponent {
     this.knihy.push({id: this.kniha.id, meno: this.kniha.meno, autor: this.kniha.autor, dostupnost:this.kniha.dostupnost});
   }
 
+  public pridajVypozicku(): void{
+    this.vypozicky.push({id: this.vypozicka.id, kniha: this.vypozicka.kniha, osoba: this.vypozicka.osoba});
+  }
 }
