@@ -1,0 +1,15 @@
+<h1>Knihy</h1>
+id:
+<input [(ngModel)]="kniha.id"><br>
+meno:
+<input [(ngModel)]="kniha.meno"><br>
+autor:
+<input [(ngModel)]="kniha.autor"><br>
+dostupnost:
+<input [(ngModel)]="kniha.dostupnost"><br>
+<br>
+<button (click)="pridajKnihu()">Pridaj</button><br><br>
+Zoznam:<br>
+<div *ngFor="let k of knihy">
+  {{k.id}} {{k.meno}} {{k.autor}} {{k.dostupnost}}
+</div>

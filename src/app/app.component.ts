@@ -19,18 +19,11 @@ export class AppComponent {
   osoby:any = [];
   osoba = {id: "id", meno:"meno", kontakt:"kontakt"};
 
-  knihy:any = [];
-  kniha = {id: " ", meno:" ", autor:" ", dostupnost:" "};
-
   vypozicky:any = [];
   vypozicka = {id:" ", kniha:" ", osoba:" "};
 
     public pridajOsobu(): void{
     this.osoby.push({id: this.osoba.id, meno: this.osoba.meno, kontakt: this.osoba.kontakt});
-  }
-
-  public pridajKnihu(): void{
-    this.knihy.push({id: this.kniha.id, meno: this.kniha.meno, autor: this.kniha.autor, dostupnost:this.kniha.dostupnost});
   }
 
   public pridajVypozicku(): void{
