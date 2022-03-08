@@ -4,37 +4,23 @@
   <button (click)="otvorMenu(menu.KNIHY)">Knihy</button>
   <button (click)="otvorMenu(menu.VYPOZICKY)">Vypozicky</button>
 
-<div *ngIf="aktualne == menu.OSOBY">
-  <h1>Osoby</h1>
-  id:
-  <input [(ngModel)]="osoba.id"><br>
-  meno:
-  <input [(ngModel)]="osoba.meno"><br>
-  kontakt:
-  <input [(ngModel)]="osoba.kontakt"><br>
-  <br>
-  <button (click)="pridajOsobu()">Pridaj</button><br><br>
-  Zoznam:<br>
-  <div *ngFor="let o of osoby">
-    {{o.id}} {{o.meno}} {{o.kontakt}}
-  </div>
-</div>
+  <router-outlet></router-outlet>
+
+  <app-prvastranka></app-prvastranka>
 
   <div *ngIf="aktualne == menu.KNIHY">
-    <h1>Knihy</h1>
+    <h1>Osoby</h1>
     id:
-    <input [(ngModel)]="kniha.id"><br>
+    <input [(ngModel)]="osoba.id"><br>
     meno:
-    <input [(ngModel)]="kniha.meno"><br>
-    autor:
-    <input [(ngModel)]="kniha.autor"><br>
-    dostupnost:
-    <input [(ngModel)]="kniha.dostupnost"><br>
+    <input [(ngModel)]="osoba.meno"><br>
+    kontakt:
+    <input [(ngModel)]="osoba.kontakt"><br>
     <br>
-    <button (click)="pridajKnihu()">Pridaj</button><br><br>
+    <button (click)="pridajOsobu()">Pridaj</button><br><br>
     Zoznam:<br>
-    <div *ngFor="let k of knihy">
-      {{k.id}} {{k.meno}} {{k.autor}} {{k.dostupnost}}
+    <div *ngFor="let o of osoby">
+      {{o.id}} {{o.meno}} {{o.kontakt}}
     </div>
   </div>
 
