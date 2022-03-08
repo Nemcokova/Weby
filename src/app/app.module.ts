@@ -7,13 +7,15 @@ import { KnihyComponentComponent } from './knihy-component/knihy-component.compo
 import { PrvastrankaComponent } from './prvastranka/prvastranka.component';
 import {RouterModule} from "@angular/router";
 import { OsobyComponent } from './osoby/osoby.component';
+import { VypozickyComponent } from './vypozicky/vypozicky.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KnihyComponentComponent,
     PrvastrankaComponent,
-    OsobyComponent
+    OsobyComponent,
+    VypozickyComponent
   ],
   imports: [
     BrowserModule,
