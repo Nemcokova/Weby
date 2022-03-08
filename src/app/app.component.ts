@@ -9,6 +9,7 @@ enum MENU {OSOBY, KNIHY,VYPOZICKY}
 })
 export class AppComponent {
 
+  title = "stranka";
   menu = MENU;
   aktualne: MENU = MENU.OSOBY;
 
@@ -16,15 +17,11 @@ export class AppComponent {
     this.aktualne = m;
   }
 
-  osoby:any = [];
-  osoba = {id: "id", meno:"meno", kontakt:"kontakt"};
+
 
   vypozicky:any = [];
   vypozicka = {id:" ", kniha:" ", osoba:" "};
 
-    public pridajOsobu(): void{
-    this.osoby.push({id: this.osoba.id, meno: this.osoba.meno, kontakt: this.osoba.kontakt});
-  }
 
   public pridajVypozicku(): void{
     this.vypozicky.push({id: this.vypozicka.id, kniha: this.vypozicka.kniha, osoba: this.vypozicka.osoba});

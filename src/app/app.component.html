@@ -8,23 +8,7 @@
 
   <app-prvastranka></app-prvastranka>
 
-  <div *ngIf="aktualne == menu.KNIHY">
-    <h1>Osoby</h1>
-    id:
-    <input [(ngModel)]="osoba.id"><br>
-    meno:
-    <input [(ngModel)]="osoba.meno"><br>
-    kontakt:
-    <input [(ngModel)]="osoba.kontakt"><br>
-    <br>
-    <button (click)="pridajOsobu()">Pridaj</button><br><br>
-    Zoznam:<br>
-    <div *ngFor="let o of osoby">
-      {{o.id}} {{o.meno}} {{o.kontakt}}
-    </div>
-  </div>
-
-  <div *ngIf="aktualne == menu.VYPOZICKY">
+    <div *ngIf="aktualne == menu.VYPOZICKY">
     <h1>Vypozicky</h1>
     id:
     <input [(ngModel)]="vypozicka.id"><br>
