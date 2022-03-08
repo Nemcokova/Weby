@@ -1,0 +1,16 @@
+
+
+
+  <h1>Osoby</h1>
+  id:
+  <input [(ngModel)]="osoba.id"><br>
+  meno:
+  <input [(ngModel)]="osoba.meno"><br>
+  kontakt:
+  <input [(ngModel)]="osoba.kontakt"><br>
+  <br>
+  <button (click)="pridajOsobu()">Pridaj</button><br><br>
+  Zoznam:<br>
+  <div *ngFor="let o of osoby">
+    {{o.id}} {{o.meno}} {{o.kontakt}}
+  </div>
